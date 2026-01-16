@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Niki</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink-main: #ff5fa2;
+      --pink-soft: #ffd1e6;
+      --purple-dark: #1a0b2e;
+      --purple-mid: #2b124c;
+      --white: #ffffff;
+      --glass: rgba(255, 255, 255, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--purple-dark), var(--purple-mid));
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--pink-main);
+      text-shadow: 0 0 20px rgba(255, 95, 162, 0.6);
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: var(--pink-soft);
+    }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* ===== Card ===== */
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border-radius: 22px;
+      padding: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,95,162,0.3), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 35px rgba(255, 95, 162, 0.4);
+    }
+
+    .card h2 {
+      color: var(--pink-main);
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .card p,
+    .card li {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #fbe6f0;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    /* ===== Highlight Text ===== */
+    .highlight {
+      color: var(--pink-main);
+      font-weight: 600;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 40px 20px 30px;
+      font-size: 0.85rem;
+      color: var(--pink-soft);
+      opacity: 0.8;
+    }
+
+    /* ===== Floating Hearts ===== */
+    .heart {
+      position: fixed;
+      width: 14px;
+      height: 14px;
+      background: var(--pink-main);
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.4;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: var(--pink-main);
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -7px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -7px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="heart" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="heart" style="left: 55%; animation-delay: 4s;"></div>
+  <div class="heart" style="left: 80%; animation-delay: 1s;"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>Nikita Bunga Septiani</h1>
+    <p>Call me <span class="highlight">Niki</span> ✦ Cyber Pink Portfolio</p>
+  </header>
+
+  <!-- Content -->
+  <section class="container">
+
+    <div class="card">
+      <h2>✨ Tentang Ku</h2>
+      <p>
+        <!-- ISI SENDIRI -->
+        Aku adalah pribadi yang friendly. extrovert 98% (ENFP) 
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🎓 Profil</h2>
+      <p>
+        Nama: <span class="highlight">Nikita Bunga Septiani</span><br>
+        Panggilan: Niki<br>
+        Kelas: X TKJ 2<br>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🎮 Hobi</h2>
+      <ul>
+        <li>Bermain game</li>
+        <li>Ngoding</li>
+        <li>Menggambar</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>💗 Hal yang Ku Suka</h2>
+      <p>
+        <!-- ISI SENDIRI -->
+        Makanan manis! - Mencoba hal baru! - You💗 :3
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Skill & Minat</h2>
+      <p>
+        <!-- ISI SENDIRI -->
+        keterampilan menggambar sebagai media ekspresi visual.
+        menguasai dasar taekwondo
+        pengembangan kemampuan coding
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🌸 Catatan Lain</h2>
+      <p>
+        <!-- ISI SENDIRI -->
+        Love affection! Eternal power for a sweet nightmare. . iseeu
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 • Cyber Pink Portfolio • Niki
+  </footer>
+
+</body>
+</html>
